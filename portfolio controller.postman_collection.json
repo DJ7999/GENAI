@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "c7df0e31-0f77-437d-b4b2-f5ca559d10ed",
+		"name": "portfolio controller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30816685",
+		"_collection_link": "https://lively-spaceship-6710.postman.co/workspace/BHDREAMAMC~28672767-6809-439d-92d1-8bcdc72a9273/collection/30816685-c7df0e31-0f77-437d-b4b2-f5ca559d10ed?action=share&source=collection_link&creator=30816685"
+	},
+	"item": [
+		{
+			"name": "all equities",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add equity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MDAwNTY1NDksImlhdCI6MTY5OTk3MDE0OSwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjp0cnVlfQ.ZtYLrlKS9niYNTqNr_XCovAdLv0s2Z2U3kceGcW1Muk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//shall only be done by staff or admin\r\n{\r\n    \"title\":\"Reliance Industries Limited\",\r\n    \"symbol\":\"RELIANCE.NS\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/portfolio/equities/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete equity",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MDAwNTY1NDksImlhdCI6MTY5OTk3MDE0OSwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjp0cnVlfQ.ZtYLrlKS9niYNTqNr_XCovAdLv0s2Z2U3kceGcW1Muk"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/portfolio/equities/?symbol=ITBEES.NS",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"portfolio",
+						"equities",
+						""
+					],
+					"query": [
+						{
+							"key": "symbol",
+							"value": "ITBEES.NS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add investment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//Q i have purchased today 3 shares of tata motors at 400 per unit\r\n{\r\n  \"user\": 1,  // Replace with the actual user ID\r\n  \"equity\": 1,  // Replace with the actual equity ID\r\n  \"investment_date\": \"2023-11-14\",  // Replace with the actual date\r\n  \"shares\": 100,\r\n  \"purchase_price\": 50.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/portfolio/investment/"
+			},
+			"response": []
+		},
+		{
+			"name": "get user investment history",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "delete user investment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MDAwNTY1NDksImlhdCI6MTY5OTk3MDE0OSwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjp0cnVlfQ.ZtYLrlKS9niYNTqNr_XCovAdLv0s2Z2U3kceGcW1Muk"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "id",
+						"value": "15",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/portfolio/investment/"
+			},
+			"response": []
+		},
+		{
+			"name": "get portfolio",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE3MDAwNTY1NDksImlhdCI6MTY5OTk3MDE0OSwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjp0cnVlfQ.ZtYLrlKS9niYNTqNr_XCovAdLv0s2Z2U3kceGcW1Muk"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "user",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/portfolio/get_portfolio/"
+			},
+			"response": []
+		},
+		{
+			"name": "optimise_portfolio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getAum",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDEwOTcyODcsImlhdCI6MTcwMTAxMDg4NywiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjpmYWxzZX0.7OlekGAKzIT4MoD2zQakAKcrGC-sEg4KxaIcBDD8iDY"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/portfolio/get_AUM/"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDExMzk3NDUsImlhdCI6MTcwMTA1MzM0NSwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6ZmFsc2UsImlzX3N1cGVydXNlciI6ZmFsc2V9.VEYq5s0kD_Gv2vVpmBmQGC1GQU-4j0qVC-DCc8c3pPQ"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"current_portfolio\":    {\r\n    \"IDFCFIRSTB.NS\":0.1,\r\n    \"ITBEES.NS\":0.5,\r\n    \"GOLDBEES.NS\":0.2,\r\n    \"NIFTYBEES.NS\":0.2\r\n},\r\n\"optimised_portfolio\":{\r\n    \"IDFCFIRSTB.NS\":0.2,\r\n    \"ITBEES.NS\":0.3,\r\n    \"GOLDBEES.NS\":0.2,\r\n    \"NIFTYBEES.NS\":0.3\r\n}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/portfolio/get_performance/"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "aaecf7b3-30ca-4981-a59b-cd1c03e47895",
+		"name": "wealth wish",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30816685",
+		"_collection_link": "https://lively-spaceship-6710.postman.co/workspace/BHDREAMAMC~28672767-6809-439d-92d1-8bcdc72a9273/collection/30816685-aaecf7b3-30ca-4981-a59b-cd1c03e47895?action=share&source=collection_link&creator=30816685"
+	},
+	"item": [
+		{
+			"name": "get all goals",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "create new goal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDA0MDA4MzIsImlhdCI6MTcwMDMxNDQzMiwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjpmYWxzZX0.NXJxtp4PZ_ldS3U9YJyLj6n9LrzaZ5wIpACQ5evrFZk"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user\":2,\r\n    \"name\":\"car goal duration\",\r\n    \"duration_in_months\":69,\r\n//    \"monthly_contribution\":5000,\r\n    \"goal_amount\":500000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/wealthwish/goals/"
+			},
+			"response": []
+		},
+		{
+			"name": "delete goal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDA0MDA4MzIsImlhdCI6MTcwMDMxNDQzMiwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjpmYWxzZX0.NXJxtp4PZ_ldS3U9YJyLj6n9LrzaZ5wIpACQ5evrFZk"
+					}
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "name",
+						"value": "first test goal without goal amount",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/wealthwish/goals/"
+			},
+			"response": []
+		},
+		{
+			"name": "edit goal",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDA0MDA4MzIsImlhdCI6MTcwMDMxNDQzMiwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjpmYWxzZX0.NXJxtp4PZ_ldS3U9YJyLj6n9LrzaZ5wIpACQ5evrFZk"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"name\":\"car goal duration\",\r\n    \"duration_in_months\":80,\r\n//    \"monthly_contribution\":5000,\r\n    \"goal_amount\":500000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/wealthwish/goals/"
+			},
+			"response": []
+		},
+		{
+			"name": "change goal activation status",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDA0MDA4MzIsImlhdCI6MTcwMDMxNDQzMiwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjpmYWxzZX0.NXJxtp4PZ_ldS3U9YJyLj6n9LrzaZ5wIpACQ5evrFZk"
+					}
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"car goal duration\",\r\n    \"is_active\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/wealthwish/goals/"
+			},
+			"response": []
+		},
+		{
+			"name": "get new fire plans",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDA4MDE5MTAsImlhdCI6MTcwMDcxNTUxMCwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjpmYWxzZX0.vAcpslo1UcGopEkDSB2ahca5Nnx1YblSogasvMsNqiU"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/wealthwish/FIRE/"
+			},
+			"response": []
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE3MDA4MDE5MTAsImlhdCI6MTcwMDcxNTUxMCwiaXNfYWN0aXZlIjp0cnVlLCJpc19zdGFmZiI6dHJ1ZSwiaXNfc3VwZXJ1c2VyIjpmYWxzZX0.vAcpslo1UcGopEkDSB2ahca5Nnx1YblSogasvMsNqiU"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"url": "http://127.0.0.1:8000/wealthwish/FIRE/"
+			},
+			"response": []
+		}
+	]
+}

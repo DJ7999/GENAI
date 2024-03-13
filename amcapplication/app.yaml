@@ -1,0 +1,5 @@
+runtime: python39
+entrypoint: gunicorn -b :$PORT bhdream_amc_app.wsgi:application
+
+env_variables:
+  DJANGO_SETTINGS_MODULE: "bhdream_amc_app.settings"

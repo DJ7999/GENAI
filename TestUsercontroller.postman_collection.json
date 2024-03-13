@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "8c93c0aa-713e-4643-b57f-414f6c23d977",
+		"name": "TestUsercontroller",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "30816685",
+		"_collection_link": "https://lively-spaceship-6710.postman.co/workspace/BHDREAMAMC~28672767-6809-439d-92d1-8bcdc72a9273/collection/30816685-8c93c0aa-713e-4643-b57f-414f6c23d977?action=share&source=collection_link&creator=30816685"
+	},
+	"item": [
+		{
+			"name": "delete by id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOCwiZXhwIjoxNjk5OTYxNjg3LCJpYXQiOjE2OTk4NzUyODcsImlzX2FjdGl2ZSI6dHJ1ZSwiaXNfc3RhZmYiOmZhbHNlLCJpc19zdXBlcnVzZXIiOmZhbHNlfQ.IftTlJlWazUSn2Xtr8jyeBWB5Gc1Vp2od58dhEEliyU"
+					}
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/user/20/"
+			},
+			"response": []
+		},
+		{
+			"name": "get all users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwiZXhwIjoxNjk5OTY1MjI5LCJpYXQiOjE2OTk4Nzg4MjksImlzX2FjdGl2ZSI6dHJ1ZSwiaXNfc3RhZmYiOnRydWUsImlzX3N1cGVydXNlciI6dHJ1ZX0.4dQxZUO00uYJtitmSiXGk15iblMUyv8xyDABetHBwgE"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": "http://127.0.0.1:8000/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "use to create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxOSwiZXhwIjoxNjk5OTYyNTYyLCJpYXQiOjE2OTk4NzYxNjIsImlzX2FjdGl2ZSI6dHJ1ZSwiaXNfc3RhZmYiOmZhbHNlLCJpc19zdXBlcnVzZXIiOmZhbHNlfQ.R2cWoax8Vu3Lk1GopAeZZW-uqV98F3_mSLV9grBjQCs"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"KaushalSomani\",\r\n    \"password\": \"Kaushal\",\r\n    \"email\": \"Kaushal@email.com\",\r\n    \"first_name\": \"Kaushal\",\r\n    \"last_name\": \"Somani\",\r\n    \"is_active\": true,\r\n    \"is_staff\": true,\r\n    \"is_superuser\": false\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/user/"
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"first_name\": \"admin\",\r\n  \"last_name\": \"admin\",\r\n  \"username\": \"admin\",\r\n  \"email\": \"admin@mail.com\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/user/signup/"
+			},
+			"response": []
+		},
+		{
+			"name": "signin",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "//   {\r\n//    \"username\": \"AshishSurve\",\r\n//    \"password\": \"Ashish@password\"\r\n//  }\r\n{\"username\": \"RohitJoshi\",\r\n   \"password\": \"Rohit@password\"\r\n}\r\n// {\r\n//     \"username\": \"admin\",\r\n//    \"password\": \"admin\"\r\n// }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/user/signin/"
+			},
+			"response": []
+		},
+		{
+			"name": "update_user_role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "Token eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyMSwiZXhwIjoxNjk5OTY3OTQ5LCJpYXQiOjE2OTk4ODE1NDksImlzX2FjdGl2ZSI6dHJ1ZSwiaXNfc3RhZmYiOnRydWUsImlzX3N1cGVydXNlciI6dHJ1ZX0.hH0cP20iwWHjpfaVx1Jx-pY5vazVY9AsHM7p3bMKE2U"
+					}
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": 11,\r\n  \"is_staff\": true,\r\n  \"is_superuser\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/user/update_user_role/"
+			},
+			"response": []
+		}
+	]
+}
